@@ -63,15 +63,15 @@
     p {
   font-style: italic;
 }
-    #sidebar {
+  #sidebar {
   width: 150px;
   float: left;
   padding: 20px;
-  background-color: #111;
+  background-color: transparent;
   border-right: 3px dashed lime;
   height: 100%;
   position: fixed;
-  top: 200px; /* pushes below header/torches */
+  top: 200px;
   left: 0;
 }
 
@@ -79,6 +79,18 @@
   display: block;
   margin: 10px 0;
   font-size: 18px;
+  padding: 10px;
+  background-color: #111;
+  border: 2px solid lime;
+  color: lime;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+}
+
+#sidebar nav a:hover {
+  background-color: red;
+  color: yellow;
 }
 
 .content {
@@ -106,12 +118,6 @@
     <a href="#">HAZMART</a>
   </nav>
 </div>
-
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">About</a>
-    <a href="#">HAZMART</a>
-  </nav>
 
   <div class="content">
     <p>This is the HQ of heavy metal and gnarly skateboarding! Slam the posers into the pit!</p>
