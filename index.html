@@ -63,6 +63,28 @@
     p {
   font-style: italic;
 }
+    #sidebar {
+  width: 150px;
+  float: left;
+  padding: 20px;
+  background-color: #111;
+  border-right: 3px dashed lime;
+  height: 100%;
+  position: fixed;
+  top: 200px; /* pushes below header/torches */
+  left: 0;
+}
+
+#sidebar nav a {
+  display: block;
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.content {
+  margin-left: 180px; /* makes room for sidebar */
+}
+
   </style>
 </head>
 <body>
@@ -76,6 +98,15 @@
   </header>
 
   <marquee>ONE <span style="font-size: 28px; color: black;">HELL</span> OF A MAGAZINE!</marquee>
+  
+<div id="sidebar">
+  <nav>
+    <a href="#">Home</a><br>
+    <a href="#">About</a><br>
+    <a href="#">HAZMART</a>
+  </nav>
+</div>
+
   <nav>
     <a href="#">Home</a>
     <a href="#">About</a>
