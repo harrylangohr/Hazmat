@@ -100,6 +100,27 @@
   position: relative;
   z-index: 2;
 }
+    .floater {
+  position: absolute;
+  top: 100px; /* adjust height as needed */
+  left: -200px; /* start offscreen */
+  animation: floatacross 15s linear infinite;
+  z-index: 5;
+}
+
+.floater img {
+  height: 80px; /* adjust size */
+}
+
+@keyframes floatacross {
+  0% {
+    left: -200px;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
 
   </style>
 </head>
@@ -134,6 +155,10 @@
       <img src="https://www.animatedimages.org/data/media/68/animated-skateboard-image-0008.gif" alt="Skateboarding GIF">
       <img src="https://www.animatedimages.org/data/media/125/animated-skull-image-0015.gif" alt="Skull GIF">
     </div>
+    <div class="floater">
+  <img src="ghoul.png" alt="Ghoul" />
+</div>
+
   </div>
 
   <footer>
