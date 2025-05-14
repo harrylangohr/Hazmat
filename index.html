@@ -16,6 +16,17 @@
       padding: 20px;
       border-bottom: 5px double red;
     }
+  
+    @keyframes flash {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.flash-text {
+  animation: flash 1s infinite;
+}
+
     h1 {
   font-family: "Helvetica", Arial, sans-serif;
   font-weight: bold;
@@ -145,7 +156,8 @@
 <body>
 <header>
  
-  <p style="font-size: 28px;"><strong>GUTS! GORE! AND GUITARS!</strong></p>
+  <p class="flash-text" style="font-size: 28px;"><strong>GUTS! GORE! AND GUITARS!</strong></p>
+
 </header>
 
 <!-- Move marquee HERE -->
