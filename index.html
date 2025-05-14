@@ -100,24 +100,24 @@
   position: relative;
   z-index: 2;
 }
-    .floater {
+  .floater {
   position: absolute;
-  top: 100px; /* adjust height as needed */
-  left: -200px; /* start offscreen */
-  animation: floatacross 15s linear infinite;
+  top: 100px; /* adjust as needed */
+  left: 100%; /* start offscreen on the right */
+  animation: floatback 15s linear infinite;
   z-index: 5;
 }
 
 .floater img {
-  height: 80px; /* adjust size */
+  height: 250px;
 }
 
-@keyframes floatacross {
+@keyframes floatback {
   0% {
-    left: -200px;
+    left: 100%;
   }
   100% {
-    left: 100%;
+    left: -200px;
   }
 }
 
