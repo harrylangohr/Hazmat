@@ -70,7 +70,7 @@
   background-color: transparent;
   height: 100%;
   position: absolute;
-  top: 300px;
+  top: 400px;
   left: 0;
   z-index: 1;
 }
@@ -119,8 +119,16 @@
   100% {
     left: -200px;
   }
+.overlay-gif {
+  position: absolute;
+  top: 200px;   /* adjust to just above sidebar */
+  left: 10px;   /* near left side of page */
+  z-index: 10;  /* higher than marquee/sidebar */
 }
 
+.overlay-gif img {
+  height: 120px; /* adjust size as needed */
+}
 
   </style>
 </head>
@@ -135,6 +143,9 @@
 
 <!-- Move marquee HERE -->
 <marquee>ONE <span style="font-size: 28px; color: black;">HELL</span> OF A MAGAZINE!</marquee>
+<div class="overlay-gif">
+  <img src="fetid-skull.gif" alt="Overlay GIF">
+</div>
 
 <!-- Sidebar comes after -->
 <div id="sidebar">
