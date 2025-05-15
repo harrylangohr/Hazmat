@@ -62,13 +62,19 @@
       padding: 20px;
     }
     .hazmart {
-      margin: 30px auto;
-      margin-left: 180px;
-      width: 70%;
-      background-color: #111;
-      border: 3px dashed lime;
-      padding: 20px;
-    }
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.hazmart-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 
     /* Optional: Replace this marquee block with CSS one below */
     /*
@@ -233,19 +239,19 @@
   </div>
 </div>
   <div class="hazmart">
-    <div class="hazmart-item">
-      <img src="readit.png" alt="reader" style="height: 250px;">
-      <p><em>READ IT!</em></p>
-    </div>
-    <div class="hazmart-item">
-      <img src="bigGuy.png" alt="Guy" style="height: 250px;">
-      <p><em>WEAR IT!</em></p>
-    </div>
-    <div class="hazmart-item">
-      <img src="liveIt2.png" alt="ghoul" style="height: 250px;">
-      <p><em>LIVE IT!</em></p>
-    </div>
+  <div class="hazmart-item">
+    <img src="readit.png" alt="reader" style="height: 250px;">
+    <p><em>READ IT!</em></p>
   </div>
+  <div class="hazmart-item">
+    <img src="bigGuy.png" alt="Guy" style="height: 250px;">
+    <p><em>WEAR IT!</em></p>
+  </div>
+  <div class="hazmart-item">
+    <img src="liveIt2.png" alt="ghoul" style="height: 250px;">
+    <p><em>LIVE IT!</em></p>
+  </div>
+</div>
   
   <div class="floater">
     <img src="ghoul.png" alt="Floating Ghoul">
