@@ -59,22 +59,17 @@
       text-decoration: underline;
     }
 
-    .content {
+    .content,
+    .hazmart {
       margin: 30px auto;
-      margin-left: 180px;
-      width: 70%;
+      margin-left: 200px;
+      width: calc(100% - 220px);
       background-color: #111;
       border: 3px dashed lime;
       padding: 20px;
     }
 
     .hazmart {
-      margin: 30px auto;
-      margin-left: 180px;
-      width: 70%;
-      background-color: #111;
-      border: 3px dashed lime;
-      padding: 20px;
       display: flex;
       justify-content: center;
       gap: 40px;
@@ -96,6 +91,8 @@
     }
 
     .custom-marquee {
+      position: relative;
+      z-index: 2;
       overflow: hidden;
       white-space: nowrap;
       background-color: black;
@@ -103,8 +100,6 @@
       font-size: 25px;
       font-weight: bold;
       width: 100%;
-      position: relative;
-      z-index: 2;
       height: 40px;
       line-height: 40px;
     }
@@ -112,7 +107,7 @@
     .marquee-content {
       display: inline-block;
       padding-left: 100%;
-      animation: scroll-marquee 20s linear infinite;
+      animation: scroll-marquee 25s linear infinite;
     }
 
     @keyframes scroll-marquee {
@@ -136,6 +131,7 @@
       justify-content: center;
       gap: 20px;
       flex-wrap: wrap;
+      padding-bottom: 50px;
     }
 
     .gifzone img {
@@ -147,13 +143,13 @@
     }
 
     #sidebar {
-      width: 150px;
+      width: 180px;
       position: fixed;
       top: 140px;
       left: 0;
       background-color: transparent;
-      z-index: 1;
-      padding: 20px;
+      z-index: 3;
+      padding: 10px;
     }
 
     #sidebar nav a {
@@ -181,11 +177,12 @@
     }
 
     .floater {
-      position: absolute;
-      top: 750px;
+      position: fixed;
+      top: 60%;
       left: 100%;
       animation: floatback 20s linear infinite;
       z-index: 0;
+      pointer-events: none;
     }
 
     .floater img {
