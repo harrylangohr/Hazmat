@@ -11,10 +11,16 @@
       text-align: center;
       background-image: url('dungeonWall.jpeg');
       background-repeat: repeat;
+      margin: 0;
+      padding: 0;
     }
+
     header {
       padding: 20px;
       border-bottom: 5px double red;
+      background-color: #111;
+      position: relative;
+      z-index: 3;
     }
 
     @keyframes blink {
@@ -61,6 +67,7 @@
       border: 3px dashed lime;
       padding: 20px;
     }
+
     .hazmart {
       margin: 30px auto;
       margin-left: 180px;
@@ -98,6 +105,8 @@
       width: 100%;
       position: relative;
       z-index: 2;
+      height: 40px;
+      line-height: 40px;
     }
 
     .marquee-content {
@@ -139,14 +148,12 @@
 
     #sidebar {
       width: 150px;
-      float: left;
-      padding: 20px;
-      background-color: transparent;
-      height: 100%;
-      position: absolute;
-      top: 295px;
+      position: fixed;
+      top: 140px;
       left: 0;
+      background-color: transparent;
       z-index: 1;
+      padding: 20px;
     }
 
     #sidebar nav a {
@@ -177,8 +184,8 @@
       position: absolute;
       top: 750px;
       left: 100%;
-      animation: floatback 17s linear infinite;
-      z-index: 5;
+      animation: floatback 20s linear infinite;
+      z-index: 0;
     }
 
     .floater img {
