@@ -62,46 +62,31 @@
       padding: 20px;
     }
     .hazmart {
-  margin: 30px auto;
-  margin-left: 180px;
-  width: 70%;
-  background-color: #111;
-  border: 3px dashed lime;
-  padding: 20px;
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  flex-wrap: wrap;
-  text-align: center;
-}
-
-.hazmart p {
-  font-family: "Helvetica", Arial, sans-serif;
-  font-weight: bold;
-  font-style: italic;
-  font-size: 25px;
-}
-
-
-.hazmart-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-
-    /* Optional: Replace this marquee block with CSS one below */
-    /*
-    marquee {
-      color: orange;
-      font-size: 25px;
-      background-color: black;
-      padding: 3px;
-      font-weight: bold;
-      position: relative;
-      z-index: 2;
+      margin: 30px auto;
+      margin-left: 180px;
+      width: 70%;
+      background-color: #111;
+      border: 3px dashed lime;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      text-align: center;
     }
-    */
+
+    .hazmart p {
+      font-family: "Helvetica", Arial, sans-serif;
+      font-weight: bold;
+      font-style: italic;
+      font-size: 25px;
+    }
+
+    .hazmart-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
     .custom-marquee {
       overflow: hidden;
@@ -163,48 +148,30 @@
       left: 0;
       z-index: 1;
     }
-/*
+
     #sidebar nav a {
       display: block;
       margin: 10px 0;
       font-size: 18px;
       padding: 10px;
-      background-color: #111;
-      border: 2px solid lime;
+      background-image: url('stone-texture.jpg');
+      background-size: cover;
+      border: 3px outset #666;
       color: lime;
+      text-shadow: 1px 1px black;
       text-decoration: none;
       font-weight: bold;
       text-align: center;
+      box-shadow: inset 1px 1px 0 #444, inset -1px -1px 0 #000, 2px 2px 5px #000;
+      transition: transform 0.2s, box-shadow 0.2s;
     }
 
     #sidebar nav a:hover {
-      background-color: red;
+      background-color: darkred;
       color: yellow;
+      transform: translateY(2px);
+      box-shadow: inset 0 0 0 #000, 1px 1px 2px #000;
     }
-*/
-    #sidebar nav a {
-  display: block;
-  margin: 10px 0;
-  font-size: 18px;
-  padding: 10px;
-  background-image: url('stone-texture.jpg'); /* Replace with your actual stone texture filename */
-  background-size: cover;
-  border: 3px outset #666;
-  color: lime;
-  text-shadow: 1px 1px black;
-  text-decoration: none;
-  font-weight: bold;
-  text-align: center;
-  box-shadow: inset 1px 1px 0 #444, inset -1px -1px 0 #000, 2px 2px 5px #000;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-#sidebar nav a:hover {
-  background-color: darkred;
-  color: yellow;
-  transform: translateY(2px);
-  box-shadow: inset 0 0 0 #000, 1px 1px 2px #000;
-}
 
     .floater {
       position: absolute;
@@ -214,27 +181,32 @@
       z-index: 5;
     }
 
-    @keyframes float-ghoul {
-  0% {
-    left: 100%;
-  }
-  80% {
-    left: -200px;
-  }
-  100% {
-    left: -200px;
-  }
-}
+    .floater img {
+      height: 300px;
+    }
 
-.floater {
-  position: absolute;
-  top: 750px;
-  left: 100%;
-  animation: float-ghoul 20s linear infinite;
-  animation-fill-mode: forwards;
-  z-index: 5;
-}
+    @keyframes floatback {
+      0% {
+        left: 100%;
+      }
+      75% {
+        left: -200px;
+      }
+      100% {
+        left: -200px;
+      }
+    }
 
+    .overlay-gif {
+      position: absolute;
+      top: 20px;
+      left: 10px;
+      z-index: 10;
+    }
+
+    .overlay-gif img {
+      height: 325px;
+    }
   </style>
 </head>
 <body>
@@ -271,27 +243,27 @@
     <img src="hazmattv.kids.gif" alt="ghoul" style="height: 250px;">
     <img src="ghoul4.gif" alt="Side GIF" style="height: 300px; margin-left: 80px;">
   </div>
-</div>
+
   <div class="hazmart">
-  <div class="hazmart-item">
-    <img src="readit.png" alt="reader" style="height: 300px;">
-    <p><em>READ IT!</em></p>
-  </div>
-  <div class="hazmart-item">
-    <img src="bigGuy.png" alt="Guy" style="height: 300px;">
-    <p><em>WEAR IT!</em></p>
-  </div>
-  <div class="hazmart-item">
-    <img src="liveIt2.png" alt="ghoul" style="height: 300px;">
-    <p><em>LIVE IT!</em></p>
-  </div>
-</div>
-  
-  <div class="floater">
-    <img src="ghoul.png" alt="Floating Ghoul">
+    <div class="hazmart-item">
+      <img src="readit.png" alt="reader" style="height: 300px;">
+      <p><em>READ IT!</em></p>
+    </div>
+    <div class="hazmart-item">
+      <img src="bigGuy.png" alt="Guy" style="height: 300px;">
+      <p><em>WEAR IT!</em></p>
+    </div>
+    <div class="hazmart-item">
+      <img src="liveIt2.png" alt="ghoul" style="height: 300px;">
+      <p><em>LIVE IT!</em></p>
+    </div>
   </div>
 </div>
-  
+
+<div class="floater">
+  <img src="ghoul.png" alt="Floating Ghoul">
+</div>
+
 <footer>
   <p>© 2025 HAZMAT RULES!!! | <span id="counter">Visitor #666</span></p>
 </footer>
