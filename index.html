@@ -214,31 +214,27 @@
       z-index: 5;
     }
 
-    .floater img {
-      height: 300px;
-    }
-
-    @keyframes floatback {
+    @keyframes float-ghoul {
   0% {
     left: 100%;
   }
-  75% {
+  80% {
     left: -200px;
   }
   100% {
     left: -200px;
   }
 }
-    .overlay-gif {
-      position: absolute;
-      top: 20px;
-      left: 10px;
-      z-index: 10;
-    }
 
-    .overlay-gif img {
-      height: 325px;
-    }
+.floater {
+  position: absolute;
+  top: 750px;
+  left: 100%;
+  animation: float-ghoul 20s linear infinite;
+  animation-fill-mode: forwards;
+  z-index: 5;
+}
+
   </style>
 </head>
 <body>
