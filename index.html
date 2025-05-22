@@ -90,6 +90,16 @@
       align-items: center;
     }
 
+    .hazmart-item img {
+      cursor: pointer;
+      transition: border 0.3s;
+      border: 3px solid transparent;
+    }
+
+    .hazmart-item img:hover {
+      border: 3px solid lime;
+    }
+
     .custom-marquee {
       position: relative;
       z-index: 2;
@@ -147,14 +157,14 @@
     }
 
     #sidebar {
-    width: 180px;
-    position: fixed;
-    top: 0vh;
-    left: 0;
-    background-color: transparent;
-    z-index: 3;
-    padding: 1.5rem;
-}
+      width: 180px;
+      position: fixed;
+      top: 12vh;
+      left: 0;
+      background-color: transparent;
+      z-index: 3;
+      padding: 1.5rem;
+    }
 
     #sidebar nav a {
       display: block;
@@ -230,11 +240,10 @@
   </div>
 </div>
 
-
 <div id="sidebar">
   <div class="overlay-gif">
-  <img src="fetid-skull2.gif" alt="Overlay GIF">
-</div>
+    <img src="fetid-skull2.gif" alt="Overlay GIF">
+  </div>
   <nav>
     <a href="#">HOME</a>
     <a href="#">HAZMART</a>
@@ -277,7 +286,7 @@
 </div>
 
 <footer>
-  <p>© 2025 HAZMAT RULES!!! | <span id="counter">Visitor #666</span></p>
+  <p>© 2025 HAZMAT RULES!!! | <span id="counter">Visitor #<span style="color:red; font-size:18px; font-weight:bold;">666</span></span></p>
 </footer>
 
 </body>
