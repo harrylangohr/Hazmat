@@ -2,7 +2,8 @@
 <html>
 <head>
   <title>GUTS! GORE! GUITARS!</title>
-  <link rel="icon" type="image/png" href="hazmat_favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="favicon.png">
   <style>
     body {
       background-color: #222;
@@ -62,10 +63,11 @@
     .content,
     .hazmart {
       margin: 30px auto;
-      width: calc(100% - 500px);
+      max-width: 1000px;
       background-color: #111;
       border: 3px dashed lime;
       padding: 20px;
+      width: 90%;
     }
 
     .hazmart {
@@ -80,13 +82,13 @@
       font-family: "Helvetica", Arial, sans-serif;
       font-weight: bold;
       font-style: italic;
-      font-size: 20px;
+      font-size: 25px;
       margin: 8px;
-      background-color: #454545;
+      background-image: url('stone-texture.jpg');
       background-size: cover;
       color: lime;
       text-shadow: 1px 1px black;
-      padding: 5px 9px;
+      padding: 10px 20px;
       border: 3px outset #666;
       box-shadow: inset 1px 1px 0 #444, inset -1px -1px 0 #000, 2px 2px 5px #000;
       transition: transform 0.2s, box-shadow 0.2s;
@@ -96,7 +98,7 @@
     .hazmart p:hover {
       border: 3px solid lime;
       transform: translateY(2px);
-      box-shadow: inset 0 0 0 #000, 1px 1px 1px #000;
+      box-shadow: inset 0 0 0 #000, 1px 1px 2px #000;
     }
 
     .hazmart-item {
@@ -109,6 +111,8 @@
       cursor: pointer;
       transition: border 0s;
       border: 3px solid transparent;
+      max-width: 100%;
+      height: auto;
     }
 
     .hazmart-item img:hover {
@@ -164,7 +168,8 @@
     }
 
     .gifzone img {
-      margin: 0;
+      max-width: 100%;
+      height: auto;
     }
 
     p {
@@ -239,7 +244,36 @@
 
     .overlay-gif img {
       height: 355px;
-   
+    }
+
+    .ghoulbox {
+      margin: 50px auto;
+      width: 80%;
+      border: 4px double red;
+      background-color: #111;
+      padding: 20px;
+      color: lime;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 18px;
+    }
+
+    @media (max-width: 768px) {
+      #sidebar {
+        position: static;
+        width: 100%;
+        text-align: center;
+        padding-top: 10px;
+      }
+
+      .overlay-gif {
+        display: none;
+      }
+
+      .content,
+      .hazmart {
+        width: 95%;
+      }
+    }
   </style>
 </head>
 <body>
