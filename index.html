@@ -179,8 +179,8 @@
     #sidebar {
       width: 180px;
       position: fixed;
-      top: 7vh;
-      left: 2.5%;
+      top: 5vh;
+      left: 0;
       background-color: transparent;
       z-index: 3;
       padding: 1.5rem;
@@ -259,25 +259,32 @@
 
     @media (max-width: 768px) {
       #sidebar {
-        position: static;
+        position: fixed;
+        top: 0;
+        left: 0;
         width: 100%;
         text-align: center;
-        padding-top: 10px;
+        padding: 5px;
+        background-color: #111;
+        z-index: 4;
       }
 
       .overlay-gif {
         display: none;
       }
-      
-@media (max-width: 768px) {
-  .custom-marquee {
-    display: none;
-  }
-}
+
+      .custom-marquee {
+        display: none;
+      }
 
       .content,
       .hazmart {
         width: 95%;
+        margin: 20px auto;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
       }
     }
   </style>
