@@ -257,6 +257,28 @@
       font-size: 18px;
     }
 
+    @media (max-width: 1500px) {
+      #sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        padding: 5px;
+        background-color: #111;
+        z-index: 4;
+      }
+      .content,
+      .hazmart {
+        width: 60%;
+        margin: 20px auto;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
     @media (max-width: 768px) {
       #sidebar {
         position: fixed;
